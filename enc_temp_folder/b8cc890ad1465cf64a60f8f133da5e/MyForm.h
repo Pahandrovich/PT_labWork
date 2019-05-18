@@ -709,7 +709,6 @@ namespace TV00 {
 					if (j != med.size()) 
 						tab.ni[tab.ni.size() - 1] += med.size() - j;
 
-					//if ()
 					//X_2 = 2;
 					label6->Text = Convert::ToString(flag);
 				}
