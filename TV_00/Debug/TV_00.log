@@ -1,0 +1,5 @@
+﻿  MyForm.cpp
+d:\pavel\university\vs_project\tv2\tv_00\myform.h(516): warning C4018: <: несоответствие типов со знаком и без знака
+d:\pavel\university\vs_project\tv2\tv_00\myform.cpp(7): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  TV_00.vcxproj -> D:\PAVEL\University\VS_Project\TV2\Debug\TV_00.exe
