@@ -527,6 +527,16 @@ namespace TV00 {
 			return (double)C(n,i) *pow(p,i)*pow(1-p, n-i);
 		}
 
+		double P_bin_X(int n, double i, double p)
+		{
+			if (i == 0.0) return 0.0;
+			int j = 0;
+			if (i - (int)i == 0) j = (int)i - 1;
+			else j = (int)i;
+			
+			return P_bin(n, j, p);
+		}
+
 		
 
 		private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -709,8 +719,12 @@ namespace TV00 {
 					if (j != med.size()) 
 						tab.ni[tab.ni.size() - 1] += med.size() - j;
 
-					//if ()
-					//X_2 = 2;
+					for (int i = 0; i < k - 2; i++)
+					{
+						tab.pi[i] = P_bin_X(N, intervals[i + 1], p) - P_bin_X(N, intervals[i], p);
+					}
+					//for (int i = 0; i < k-2; i++)
+
 					label6->Text = Convert::ToString(flag);
 				}
 			}
