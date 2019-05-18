@@ -81,6 +81,15 @@ namespace TV00 {
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::DataGridView^  dataGridView4;
+	private: System::Windows::Forms::TextBox^  textBox1_k;
+
+
+
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
+	private: System::Windows::Forms::CheckBox^  checkBox1;
+	private: System::Windows::Forms::Button^  button2;
+
 	private: System::ComponentModel::IContainer^  components;
 
 
@@ -132,6 +141,11 @@ namespace TV00 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->textBox1_k = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
@@ -141,7 +155,7 @@ namespace TV00 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(55, 211);
+			this->label1->Location = System::Drawing::Point(64, 190);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(196, 13);
@@ -150,8 +164,8 @@ namespace TV00 {
 			// 
 			// textBox1_p
 			// 
-			this->textBox1_p->Location = System::Drawing::Point(110, 233);
-			this->textBox1_p->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1_p->Location = System::Drawing::Point(119, 212);
+			this->textBox1_p->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1_p->Name = L"textBox1_p";
 			this->textBox1_p->Size = System::Drawing::Size(76, 20);
 			this->textBox1_p->TabIndex = 1;
@@ -159,10 +173,10 @@ namespace TV00 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(83, 349);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Location = System::Drawing::Point(26, 353);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(117, 36);
+			this->button1->Size = System::Drawing::Size(100, 36);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Смоделировать";
 			this->button1->UseVisualStyleBackColor = true;
@@ -171,7 +185,7 @@ namespace TV00 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(81, 152);
+			this->label2->Location = System::Drawing::Point(90, 131);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(145, 13);
@@ -180,8 +194,8 @@ namespace TV00 {
 			// 
 			// textBox1_M
 			// 
-			this->textBox1_M->Location = System::Drawing::Point(110, 174);
-			this->textBox1_M->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1_M->Location = System::Drawing::Point(119, 153);
+			this->textBox1_M->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1_M->Name = L"textBox1_M";
 			this->textBox1_M->Size = System::Drawing::Size(76, 20);
 			this->textBox1_M->TabIndex = 4;
@@ -191,7 +205,7 @@ namespace TV00 {
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(324, 10);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(661, 113);
@@ -202,7 +216,7 @@ namespace TV00 {
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox2->Location = System::Drawing::Point(9, 10);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
@@ -214,8 +228,8 @@ namespace TV00 {
 			// 
 			// textBox1_N
 			// 
-			this->textBox1_N->Location = System::Drawing::Point(110, 292);
-			this->textBox1_N->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1_N->Location = System::Drawing::Point(119, 271);
+			this->textBox1_N->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1_N->Name = L"textBox1_N";
 			this->textBox1_N->Size = System::Drawing::Size(76, 20);
 			this->textBox1_N->TabIndex = 9;
@@ -224,7 +238,7 @@ namespace TV00 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(81, 270);
+			this->label3->Location = System::Drawing::Point(90, 249);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(147, 13);
@@ -239,7 +253,7 @@ namespace TV00 {
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
 			this->dataGridView2->Location = System::Drawing::Point(324, 127);
-			this->dataGridView2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowTemplate->Height = 24;
 			this->dataGridView2->Size = System::Drawing::Size(661, 79);
@@ -288,11 +302,11 @@ namespace TV00 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(71, 437);
+			this->label4->Location = System::Drawing::Point(23, 411);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(35, 13);
+			this->label4->Size = System::Drawing::Size(131, 13);
 			this->label4->TabIndex = 11;
-			this->label4->Text = L"label4";
+			this->label4->Text = L"разн. между вер. и част.";
 			// 
 			// dataGridView3
 			// 
@@ -305,7 +319,7 @@ namespace TV00 {
 			// zedGraphControl1
 			// 
 			this->zedGraphControl1->Location = System::Drawing::Point(999, 11);
-			this->zedGraphControl1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->zedGraphControl1->Margin = System::Windows::Forms::Padding(4);
 			this->zedGraphControl1->Name = L"zedGraphControl1";
 			this->zedGraphControl1->ScrollGrace = 0;
 			this->zedGraphControl1->ScrollMaxX = 0;
@@ -320,7 +334,7 @@ namespace TV00 {
 			// zedGraphControl2
 			// 
 			this->zedGraphControl2->Location = System::Drawing::Point(999, 292);
-			this->zedGraphControl2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->zedGraphControl2->Margin = System::Windows::Forms::Padding(4);
 			this->zedGraphControl2->Name = L"zedGraphControl2";
 			this->zedGraphControl2->ScrollGrace = 0;
 			this->zedGraphControl2->ScrollMaxX = 0;
@@ -335,16 +349,16 @@ namespace TV00 {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(71, 473);
+			this->label5->Location = System::Drawing::Point(23, 438);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(35, 13);
+			this->label5->Size = System::Drawing::Size(133, 13);
 			this->label5->TabIndex = 15;
-			this->label5->Text = L"label5";
+			this->label5->Text = L"макс. разн. между граф.";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(71, 518);
+			this->label6->Location = System::Drawing::Point(1014, 600);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(35, 13);
 			this->label6->TabIndex = 16;
@@ -353,16 +367,68 @@ namespace TV00 {
 			// dataGridView4
 			// 
 			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView4->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Column9 });
 			this->dataGridView4->Location = System::Drawing::Point(324, 310);
 			this->dataGridView4->Name = L"dataGridView4";
 			this->dataGridView4->Size = System::Drawing::Size(661, 334);
 			this->dataGridView4->TabIndex = 17;
+			// 
+			// Column9
+			// 
+			this->Column9->HeaderText = L"Границы интервалов";
+			this->Column9->Name = L"Column9";
+			// 
+			// textBox1_k
+			// 
+			this->textBox1_k->Location = System::Drawing::Point(119, 329);
+			this->textBox1_k->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1_k->Name = L"textBox1_k";
+			this->textBox1_k->Size = System::Drawing::Size(76, 20);
+			this->textBox1_k->TabIndex = 19;
+			this->textBox1_k->Text = L"10";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(114, 310);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(105, 13);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"Число разбиений k";
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Location = System::Drawing::Point(26, 475);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(174, 17);
+			this->checkBox1->TabIndex = 20;
+			this->checkBox1->Text = L"автоматический ввод границ";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button2->Location = System::Drawing::Point(185, 353);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(106, 36);
+			this->button2->TabIndex = 21;
+			this->button2->Text = L"нарисовать таблицу для ввода";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1458, 656);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->checkBox1);
+			this->Controls->Add(this->textBox1_k);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->dataGridView4);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
@@ -380,7 +446,7 @@ namespace TV00 {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1_p);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"Моделирование случайных величин";
@@ -550,6 +616,44 @@ namespace TV00 {
 
 			zedGraphControl2->AxisChange();
 			zedGraphControl2->Invalidate();
+
+
+			int k = Convert::ToInt32(textBox1_k->Text);
+			std::vector<double> intervals(k - 1);
+			bool flag = true;
+			if (dataGridView4->RowCount > 0)
+			{
+				double prev = Convert::ToDouble(dataGridView4[0, 0]->Value);
+				intervals[0] = prev;
+				for (int i = 1; i < k - 1 && flag; i++)
+				{
+					prev = Convert::ToDouble(dataGridView4[0, i-1]->Value);
+					if (prev > Convert::ToDouble(dataGridView4[0, i]->Value)) flag = false;
+					intervals[i] = Convert::ToDouble(dataGridView4[0, i]->Value);
+				}
+				if (flag)
+				{
+
+				}
+			}
+
+
 		}
-	};
+
+
+		private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+
+			dataGridView4->Rows->Clear();
+
+			int k = Convert::ToInt32(textBox1_k->Text);
+			int M = Convert::ToInt32(textBox1_M->Text);
+
+			for (int i = 0; i < k - 1; i++)
+			{
+				dataGridView4->Rows->Add();
+				if (k > 2)
+					dataGridView4[0, i]->Value = i * (M / (k-2.0));
+			}
+		}
+};
 }
