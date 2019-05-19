@@ -4,18 +4,7 @@
 #include <ctime>
 #include <vector>
 #include <algorithm>
-
-class Mytable
-{
-public:
-	std::vector<double> ni;
-	std::vector<double> pi;
-	Mytable(int _k)
-	{
-		ni.resize(_k);
-		pi.resize(_k);
-	}
-};
+#include "MyTable.h"
 
 namespace TV00 {
 
@@ -104,6 +93,14 @@ namespace TV00 {
 	private: System::Windows::Forms::TextBox^  textBox1_alpha;
 
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Label^  label11;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::Label^  label16;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -163,6 +160,14 @@ namespace TV00 {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->textBox1_alpha = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
@@ -250,7 +255,7 @@ namespace TV00 {
 			this->textBox1_N->Name = L"textBox1_N";
 			this->textBox1_N->Size = System::Drawing::Size(76, 20);
 			this->textBox1_N->TabIndex = 9;
-			this->textBox1_N->Text = L"1000";
+			this->textBox1_N->Text = L"10";
 			// 
 			// label3
 			// 
@@ -456,11 +461,91 @@ namespace TV00 {
 			this->label8->TabIndex = 23;
 			this->label8->Text = L"alpha";
 			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(1014, 631);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(35, 13);
+			this->label9->TabIndex = 24;
+			this->label9->Text = L"label9";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(6, 586);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(41, 13);
+			this->label10->TabIndex = 25;
+			this->label10->Text = L"label10";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(6, 616);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(41, 13);
+			this->label11->TabIndex = 26;
+			this->label11->Text = L"label11";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(12, 516);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(41, 13);
+			this->label12->TabIndex = 27;
+			this->label12->Text = L"label12";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(12, 542);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(41, 13);
+			this->label13->TabIndex = 28;
+			this->label13->Text = L"label13";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(991, 577);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(41, 13);
+			this->label14->TabIndex = 29;
+			this->label14->Text = L"label14";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(771, 3);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(41, 13);
+			this->label15->TabIndex = 30;
+			this->label15->Text = L"label15";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(196, 642);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(41, 13);
+			this->label16->TabIndex = 31;
+			this->label16->Text = L"label16";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1458, 656);
+			this->Controls->Add(this->label16);
+			this->Controls->Add(this->label15);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->textBox1_alpha);
 			this->Controls->Add(this->button2);
@@ -501,16 +586,16 @@ namespace TV00 {
 		bool rand_num(double p)
 		{
 			double num = ((double)rand()) / RAND_MAX;
-			if (num <= p) 
+			if (num <= p)
 				return true;
-			else 
+			else
 				return false;
 		}
 
 		double C(int n, int k)
 		{
 			if (k == 0 || k == n) return 1;
-			if (k == 1 || k == n-1) return n;
+			if (k == 1 || k == n - 1) return n;
 			if (k < n / 2) k = n - k;
 			double res = 1;
 			for (int i = k + 1; i <= n; i++)
@@ -522,9 +607,9 @@ namespace TV00 {
 			return res;
 		}
 
-		double P_bin(int n, int i,double p)
+		double P_bin(int n, int i, double p)
 		{
-			return (double)C(n,i) *pow(p,i)*pow(1-p, n-i);
+			return (double)C(n, i) *pow(p, i)*pow(1 - p, n - i);
 		}
 
 		double P_bin_X(int n, double i, double p)
@@ -533,204 +618,247 @@ namespace TV00 {
 			int j = 0;
 			if (i - (int)i == 0) j = (int)i - 1;
 			else j = (int)i;
-			
+
 			return P_bin(n, j, p);
 		}
 
-		
+		double intFunc(double x,std::vector<double> &v)
+		{
+			if (x == 0.0) return 0.0;
+			int y = 0;
+			if (x - (int)x == 0) y = (int)x - 1;
+			else y = (int)x;
 
-		private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			GraphPane^ panel1 = zedGraphControl1->GraphPane;
-			GraphPane^ panel2 = zedGraphControl2->GraphPane;
-			panel1->CurveList->Clear();
-			panel2->CurveList->Clear();
-			PointPairList^ point_list = gcnew ZedGraph::PointPairList();
-			PointPairList^ point_list_t = gcnew ZedGraph::PointPairList();
-
-			dataGridView1->Rows->Clear();
-			dataGridView2->Rows->Clear();
-			dataGridView3->Rows->Clear();
-			dataGridView1->Columns->Clear();
-			dataGridView3->Columns->Clear();
-
-			int N = Convert::ToInt32(textBox1_N->Text);
-			int M = Convert::ToInt32(textBox1_M->Text);
-			double p = Convert::ToDouble(textBox1_p->Text);
-			int rn = 0;
-			double MO = 0;
-			double _x_ = 0;
-			double D = 0;
-			double S2 = 0;
-			double R = 0;
-			double Me = 0;
-			double max_sub = 0;
-			double sub = 0;
-			double sum1 = 0;
-			double sum2 = 0;
-			for (int i = 0; i < M + 1; i++)
-			{
-				dataGridView1->Columns->Add("Column1" + Convert::ToString(i), Convert::ToString(i));
-				dataGridView1->Columns[i]->Width = 38;
-				dataGridView3->Columns->Add("Column3" + Convert::ToString(i), Convert::ToString(i));
-				dataGridView3->Columns[i]->Width = 50;
-			}
-			dataGridView1->Rows->Add();
-			dataGridView1->Rows->Add();
-			dataGridView1->Rows[0]->HeaderCell->Value = "ksi";
-			dataGridView1->Rows[1]->HeaderCell->Value = "frequency";
-			dataGridView3->Rows->Add();
-			dataGridView3->Rows->Add();
-			dataGridView3->Rows[0]->HeaderCell->Value = "P(ksi)";
-			dataGridView3->Rows[1]->HeaderCell->Value = "frequency";
-			std::vector<int> med(N);
-			for (int i = 1; i < N+1; i++)
-			{
-				int rn = 0;
-				for (int j = 0; j < M; j++)
-				{
-					if (rand_num(p)) rn++;
-				}
-				med[i - 1] = rn;
-				dataGridView1[rn, 0]->Value = Convert::ToInt32(dataGridView1[rn, 0]->Value) + 1;
-			}
-			for (int i = 0; i < M + 1; i++)
-			{
-				dataGridView1[i, 1]->Value =(double)((int)((Convert::ToDouble(dataGridView1[i, 0]->Value) / (N))*1000))/1000;
-				/*if (Convert::ToInt32(dataGridView1[i, 0]->Value) != 0)
-				{
-					med.push_back(i);
-				}*/
-				dataGridView3[i, 0]->Value = P_bin(M,i,p);
-				dataGridView3[i, 1]->Value = Convert::ToDouble(dataGridView1[i, 0]->Value) / (N);
-				MO += i * P_bin(M,i,p);
-				_x_ += i * Convert::ToDouble(dataGridView1[i, 0]->Value) / (N);
-			}
-
-			double err = 0,
-				max_err = 0;
-			point_list->Add(0, 0);
-			for (int i = 0; i < M + 1; i++)
-			{
-				D += (i - MO)*(i - MO)*P_bin(M, i, p);
-				S2 += (Convert::ToDouble(dataGridView1[i, 0]->Value)*(i - _x_)*(i - _x_)) / (N);
-				
-				//  sum1 - для эмпирической
-				sum1 += Convert::ToDouble(dataGridView3[i, 1]->Value);
-				point_list->Add(i, sum1);
-				if (i != M)
-					point_list->Add(i + 1, sum1);
-
-				//  sum2 - для вероятностной
-				sum2 = sum2 + P_bin(M, i, p);
-				point_list_t->Add(i, sum2);
-				if (i != M)
-					point_list_t->Add(i + 1, sum2);
-				err = fabs(sum1 - sum2);
-				if (err > max_err) max_err = err;
-				sub = fabs(P_bin(M, i, p) - Convert::ToDouble(dataGridView1[i, 0]->Value) / (N));
-				if (sub > max_sub) max_sub = sub;
-			}
-			//std::sort(med.begin(), med.begin() + 4);
-			std::sort(med.begin(), med.end());
-			if (med.size() % 2 == 0) 
-				Me = (med[med.size() / 2] + med[(med.size() - 2) / 2]) / 2.0;
-			else 
-				Me = med[med.size() / 2];
-			R = med[med.size()-1] - med[0];
-			label4->Text = "max разница между Р и Ню = " + Convert::ToString(max_sub);
-			label5->Text = "расхождение графиков = " + Convert::ToString(max_err);
-			/*label6->Text = " ";
-			if (N < 16)
-				for (int i = 0; i < med.size(); i++)
-				{
-					label6->Text += " " + Convert::ToString(med[i]);
-				}*/
-			
-			
-			dataGridView2->Rows[0]->Cells[0]->Value = MO;
-			dataGridView2->Rows[0]->Cells[1]->Value = _x_;
-			dataGridView2->Rows[0]->Cells[2]->Value = fabs(MO-_x_);
-			dataGridView2->Rows[0]->Cells[3]->Value = D;
-			dataGridView2->Rows[0]->Cells[4]->Value = S2;
-			dataGridView2->Rows[0]->Cells[5]->Value = fabs(D - S2);
-			dataGridView2->Rows[0]->Cells[6]->Value = Me;
-			dataGridView2->Rows[0]->Cells[7]->Value = R;
-
-
-			LineItem^ Curve1 = panel1->AddCurve("частота", point_list, Color::Red, SymbolType::None);
-			LineItem^ Curve2 = panel1->AddCurve("вероятность", point_list_t, Color::Blue, SymbolType::None);
-			LineItem^ Curve3 = panel2->AddCurve("вероятность", point_list_t, Color::Blue, SymbolType::None);
-
-			zedGraphControl1->AxisChange();
-			zedGraphControl1->Invalidate();
-
-			zedGraphControl2->AxisChange();
-			zedGraphControl2->Invalidate();
-
-
-			int k = Convert::ToInt32(textBox1_k->Text);
-			double alpha = Convert::ToDouble(textBox1_alpha->Text);
-			std::vector<double> intervals(k - 1);
-			double X_2 = 0.0;
-			int count = 0;
-			bool flag = true;
-			if (dataGridView4->RowCount > 1)
-			{
-				
-				if (!checkBox1->Checked) 
-				{
-					double prev = Convert::ToDouble(dataGridView4[0, 0]->Value);
-					intervals[0] = prev;
-					for (int i = 1; i < k - 1 && flag; i++)
-					{
-						prev = Convert::ToDouble(dataGridView4[0, i - 1]->Value);
-						if (prev > Convert::ToDouble(dataGridView4[0, i]->Value)) flag = false;
-						intervals[i] = Convert::ToDouble(dataGridView4[0, i]->Value);
-					}
-				}
-				else
-				{
-					double h = (double)(med[med.size()-1] - med[0]) / (k - 2.0);
-					double prev = med[0];
-					intervals[0] = prev;
-					for (int i = 1; i < k - 2 ; i++)
-					{
-						prev = med[i-1];
-						intervals[i] = med[0] + i*h;
-					}
-					intervals[intervals.size() - 1] = med[med.size()-1];
-				}
-				if (flag)
-				{
-					Mytable tab(k - 2);
-					int j = 0;
-					//while (med[j])
-					for (int i = 0; i < k-2; i++)
-					{
-						count = 0;
-						while (med[j] >= intervals[i] && med[j] < intervals[i + 1] && j < med.size())
-						{
-							j++;
-							count++;
-						}
-						tab.ni[i] = count;
-					}
-					
-					if (j != med.size()) 
-						tab.ni[tab.ni.size() - 1] += med.size() - j;
-
-					for (int i = 0; i < k - 2; i++)
-					{
-						tab.pi[i] = P_bin_X(N, intervals[i + 1], p) - P_bin_X(N, intervals[i], p);
-					}
-					//for (int i = 0; i < k-2; i++)
-
-					label6->Text = Convert::ToString(flag);
-				}
-			}
-
-
+			return v[y];
 		}
+
+
+
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		GraphPane^ panel1 = zedGraphControl1->GraphPane;
+		GraphPane^ panel2 = zedGraphControl2->GraphPane;
+		panel1->CurveList->Clear();
+		panel2->CurveList->Clear();
+		PointPairList^ point_list = gcnew ZedGraph::PointPairList();
+		PointPairList^ point_list_t = gcnew ZedGraph::PointPairList();
+
+		dataGridView1->Rows->Clear();
+		dataGridView2->Rows->Clear();
+		dataGridView3->Rows->Clear();
+		dataGridView1->Columns->Clear();
+		dataGridView3->Columns->Clear();
+
+		int N = Convert::ToInt32(textBox1_N->Text);
+		int M = Convert::ToInt32(textBox1_M->Text);
+		double p = Convert::ToDouble(textBox1_p->Text);
+		int rn = 0;
+		double MO = 0;
+		double _x_ = 0;
+		double D = 0;
+		double S2 = 0;
+		double R = 0;
+		double Me = 0;
+		double max_sub = 0;
+		double sub = 0;
+		double sum1 = 0;
+		double sum2 = 0;
+		std::vector<double> F_theor(M + 1);
+		for (int i = 0; i < M + 1; i++)
+		{
+			dataGridView1->Columns->Add("Column1" + Convert::ToString(i), Convert::ToString(i));
+			dataGridView1->Columns[i]->Width = 38;
+			dataGridView3->Columns->Add("Column3" + Convert::ToString(i), Convert::ToString(i));
+			dataGridView3->Columns[i]->Width = 50;
+		}
+		dataGridView1->Rows->Add();
+		dataGridView1->Rows->Add();
+		dataGridView1->Rows[0]->HeaderCell->Value = "ksi";
+		dataGridView1->Rows[1]->HeaderCell->Value = "frequency";
+		dataGridView3->Rows->Add();
+		dataGridView3->Rows->Add();
+		dataGridView3->Rows[0]->HeaderCell->Value = "P(ksi)";
+		dataGridView3->Rows[1]->HeaderCell->Value = "frequency";
+		std::vector<int> med(N);
+		for (int i = 1; i < N + 1; i++)
+		{
+			int rn = 0;
+			for (int j = 0; j < M; j++)
+			{
+				if (rand_num(p)) rn++;
+			}
+			med[i - 1] = rn;
+			dataGridView1[rn, 0]->Value = Convert::ToInt32(dataGridView1[rn, 0]->Value) + 1;
+		}
+		for (int i = 0; i < M + 1; i++)
+		{
+			dataGridView1[i, 1]->Value = (double)((int)((Convert::ToDouble(dataGridView1[i, 0]->Value) / (N)) * 1000)) / 1000;
+			/*if (Convert::ToInt32(dataGridView1[i, 0]->Value) != 0)
+			{
+				med.push_back(i);
+			}*/
+			dataGridView3[i, 0]->Value = P_bin(M, i, p);
+			dataGridView3[i, 1]->Value = Convert::ToDouble(dataGridView1[i, 0]->Value) / (N);
+			MO += i * P_bin(M, i, p);
+			_x_ += i * Convert::ToDouble(dataGridView1[i, 0]->Value) / (N);
+		}
+
+		double err = 0,
+			max_err = 0;
+		point_list->Add(0, 0);
+		//F_theor[0] = 0.0;
+		for (int i = 0; i < M + 1; i++)
+		{
+			D += (i - MO)*(i - MO)*P_bin(M, i, p);
+			S2 += (Convert::ToDouble(dataGridView1[i, 0]->Value)*(i - _x_)*(i - _x_)) / (N);
+
+			//  sum1 - для эмпирической
+			sum1 += Convert::ToDouble(dataGridView3[i, 1]->Value);
+			point_list->Add(i, sum1);
+			if (i != M)
+				point_list->Add(i + 1, sum1);
+
+			//  sum2 - для вероятностной
+			sum2 = sum2 + P_bin(M, i, p);
+			F_theor[i] = sum2;
+			point_list_t->Add(i, sum2);
+			if (i != M)
+				point_list_t->Add(i + 1, sum2);
+			err = fabs(sum1 - sum2);
+			if (err > max_err) max_err = err;
+			sub = fabs(P_bin(M, i, p) - Convert::ToDouble(dataGridView1[i, 0]->Value) / (N));
+			if (sub > max_sub) max_sub = sub;
+		}
+		std::sort(med.begin(), med.end());
+		if (med.size() % 2 == 0)
+			Me = (med[med.size() / 2] + med[(med.size() - 2) / 2]) / 2.0;
+		else
+			Me = med[med.size() / 2];
+		R = med[med.size() - 1] - med[0];
+		label4->Text = "max разница между Р и Ню = " + Convert::ToString(max_sub);
+		label5->Text = "расхождение графиков = " + Convert::ToString(max_err);
+		/*label6->Text = " ";
+		if (N < 16)
+			for (int i = 0; i < med.size(); i++)
+			{
+				label6->Text += " " + Convert::ToString(med[i]);
+			}*/
+
+
+		dataGridView2->Rows[0]->Cells[0]->Value = MO;
+		dataGridView2->Rows[0]->Cells[1]->Value = _x_;
+		dataGridView2->Rows[0]->Cells[2]->Value = fabs(MO - _x_);
+		dataGridView2->Rows[0]->Cells[3]->Value = D;
+		dataGridView2->Rows[0]->Cells[4]->Value = S2;
+		dataGridView2->Rows[0]->Cells[5]->Value = fabs(D - S2);
+		dataGridView2->Rows[0]->Cells[6]->Value = Me;
+		dataGridView2->Rows[0]->Cells[7]->Value = R;
+
+
+		LineItem^ Curve1 = panel1->AddCurve("частота", point_list, Color::Red, SymbolType::None);
+		LineItem^ Curve2 = panel1->AddCurve("вероятность", point_list_t, Color::Blue, SymbolType::None);
+		LineItem^ Curve3 = panel2->AddCurve("вероятность", point_list_t, Color::Blue, SymbolType::None);
+
+		zedGraphControl1->AxisChange();
+		zedGraphControl1->Invalidate();
+
+		zedGraphControl2->AxisChange();
+		zedGraphControl2->Invalidate();
+
+
+		int k = Convert::ToInt32(textBox1_k->Text);
+		double alpha = Convert::ToDouble(textBox1_alpha->Text);
+		std::vector<double> intervals(k - 1);
+
+		int count = 0;
+		bool flag = true;
+		if (dataGridView4->RowCount > 1)
+		{
+
+			if (!checkBox1->Checked)
+			{
+				double prev = Convert::ToDouble(dataGridView4[0, 0]->Value);
+				intervals[0] = prev;
+				for (int i = 1; i < k - 1 && flag; i++)
+				{
+					prev = Convert::ToDouble(dataGridView4[0, i - 1]->Value);
+					if (prev > Convert::ToDouble(dataGridView4[0, i]->Value)) flag = false;
+					intervals[i] = Convert::ToDouble(dataGridView4[0, i]->Value);
+				}
+			}
+		}
+		if (checkBox1->Checked)
+		{
+
+			double h = (double)(med[med.size() - 1] - med[0]) / (k - 2.0);
+			double prev = med[0];
+			intervals[0] = prev;
+			for (int i = 1; i < k - 2; i++)
+			{
+				prev = med[i - 1];
+				intervals[i] = med[0] + i * h;
+			}
+			intervals[intervals.size() - 1] = med[med.size() - 1];
+		}
+
+
+		label9->Text = "intervals = ";
+		for (int i = 0; i< intervals.size();i++)
+			label9->Text += " "+Convert::ToString(intervals[i]);
+
+
+		if (flag)
+		{
+			Mytable tab(k - 2);
+			int j = 0;
+			//while (med[j])
+			for (int i = 0; i < k - 2; i++)
+			{
+				count = 0;
+				while (med[j] >= intervals[i] && med[j] < intervals[i + 1] && j < med.size())
+				{
+					j++;
+					count++;
+				}
+				tab.ni[i] = count;
+			}
+
+			if (j != med.size())
+				tab.ni[tab.ni.size() - 1] += med.size() - j;
+
+			label10->Text = "ni = ";
+			for (int i = 0; i < tab.ni.size(); i++)
+				label10->Text += " " + Convert::ToString(tab.ni[i]);
+
+			for (int i = 0; i < k - 2; i++)
+			{
+				tab.pi[i] = intFunc(intervals[i + 1], F_theor) - intFunc(intervals[i], F_theor);
+				//tab.pi[i] = P_bin_X(M, intervals[i + 1], p) - P_bin_X(M, intervals[i], p);
+			}
+
+			label12->Text = "3 " + intervals[1] + " "+ intFunc(intervals[1], F_theor);
+			label13->Text = "2 = " + intervals[0] +" "+ intFunc(intervals[0], F_theor);
+
+			label11->Text = "pi = ";
+			for (int i = 0; i < tab.ni.size(); i++)
+				label11->Text += " " + Convert::ToString(tab.pi[i]);
+
+			double X_2 = 0.0;
+			label14->Text = "X_2i = ";
+			label15->Text = "N * tab.pi[i] = ";
+			for (int i = 0; i < tab.ni.size() /*k - 2*/; i++)
+			{
+				label15->Text += " " + N * tab.pi[i];
+				X_2 = X_2 + (tab.ni[i] - N * tab.pi[i])*(tab.ni[i] - N * tab.pi[i]) / (N*tab.pi[i]);
+				label14->Text += " " + X_2;
+			}
+
+
+			label6->Text = Convert::ToString(X_2);
+		}
+	
+
+
+	}
 
 
 		private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
