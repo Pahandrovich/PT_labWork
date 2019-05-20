@@ -6,6 +6,8 @@
 #include <algorithm>
 #include "MyTable.h"
 
+#define PI 3.1415926535897932384626433832795028841971
+
 namespace TV00 {
 
 	using namespace System;
@@ -132,6 +134,7 @@ namespace TV00 {
 	private: System::Windows::Forms::Label^  label16;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Label^  label17;
+	private: System::Windows::Forms::Label^  label18;
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -201,6 +204,7 @@ namespace TV00 {
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
@@ -586,11 +590,21 @@ namespace TV00 {
 			this->label17->TabIndex = 33;
 			this->label17->Text = L"label17";
 			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(0, 125);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(41, 13);
+			this->label18->TabIndex = 34;
+			this->label18->Text = L"label18";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1458, 656);
+			this->Controls->Add(this->label18);
 			this->Controls->Add(this->label17);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label16);
@@ -924,13 +938,38 @@ namespace TV00 {
 
 			k = Convert::ToInt32(textBox1_k->Text);
 			//M = Convert::ToInt32(textBox1_M->Text);
+			int size = med[med.size() - 1] - med[0];
 			if (k > 2)
 				for (int i = 0; i < k - 1; i++)
 				{
 					dataGridView4->Rows->Add();
 					if (k > 2 && M != 0)
-						dataGridView4[0, i]->Value = i * (M / (k-2.0));
+						dataGridView4[0, i]->Value = i * (size / (k-2.0));
 				}
+		}
+
+		double fChi2(double x, int r)
+		{
+			double res = 0;
+			if (x > 0)
+			{
+				res = pow(x, r / 2.0 - 1.0) / (pow(2, r / 2.0)*std::tgamma(r / 2.0)*exp(x / 2.0));
+			}
+			return res;
+		}
+
+		double FChi2(double R0, int r)
+		{
+			double res = 0;
+			int N = 10000;
+			double h = (double)R0 / N;
+
+			for (int i = 0; i < N; i++)
+			{
+				res += (fChi2(i*h, r) + fChi2((i+1)*h, r))/2.0*h;
+			}
+
+			return 1 - res;
 		}
 
 
@@ -1008,18 +1047,22 @@ namespace TV00 {
 					for (int i = 0; i < tab.pi.size(); i++)
 						label11->Text += " " + Convert::ToString(tab.pi[i]);
 					label17->Text = "Debug4";
-					double X_2 = 0.0;
+					double R0 = 0.0;
 					label14->Text = "X_2i = ";
 					label15->Text = "N * tab.pi[i] = ";
 					for (int i = 0; i < tab.ni.size() /*k - 2*/; i++)
 					{
 						label15->Text += " " + N * tab.pi[i];
-						X_2 = X_2 + (tab.ni[i] - N * tab.pi[i])*(tab.ni[i] - N * tab.pi[i]) / (N*tab.pi[i]);
-						label14->Text += " " + X_2;
+						R0 = R0 + (tab.ni[i] - N * tab.pi[i])*(tab.ni[i] - N * tab.pi[i]) / (N*tab.pi[i]);
+						label14->Text += " " + R0;
 					}
-
-
-					label6->Text = Convert::ToString(X_2);
+					double Chi = FChi2(R0, k - 1);
+					if (FChi2(R0, k - 1) > alpha)
+						label18->Text = "Нулевая гипотеза принята";
+					else 
+						label18->Text = "Нулевая гипотеза отвергнута";
+					label17->Text = Convert::ToString(Chi);
+					label6->Text = Convert::ToString(R0);
 				}
 
 
