@@ -960,9 +960,14 @@ namespace TV00 {
 
 				if (flag)
 				{
-					Mytable tab(k - 2);
+					Mytable tab(k);
 					int j = 0;
-					//while (med[j])
+					while (j < med.size() && med[j] < intervals[0])
+					{
+						j++;
+						count++;
+					}
+					tab.ni[0] = count;
 					for (int i = 0; i < k - 2; i++)
 					{
 						count = 0;
@@ -972,11 +977,11 @@ namespace TV00 {
 							count++;
 							if (j == med.size()) break;
 						}
-						tab.ni[i] = count;
+						tab.ni[i+1] = count;
 					}
 					label17->Text = "Debug1";
 
-					if (j != med.size())
+					if (j < med.size())
 						tab.ni[tab.ni.size() - 1] += med.size() - j;
 
 					label10->Text = "ni = ";
@@ -987,18 +992,20 @@ namespace TV00 {
 
 					for (int i = 0; i < k - 2; i++)
 					{
-						tab.pi[i] = intFunc(intervals[i + 1], F_theor) - intFunc(intervals[i], F_theor);
+						tab.pi[i+1] = intFunc(intervals[i + 1], F_theor) - intFunc(intervals[i], F_theor);
 						//tab.pi[i] = P_bin_X(M, intervals[i + 1], p) - P_bin_X(M, intervals[i], p);
 					}
+					tab.pi[0] = intFunc(intervals[0], F_theor);
+					tab.pi[tab.pi.size() - 1] = 1.0 - intFunc(intervals[intervals.size()-1], F_theor);
 
-					label12->Text = "3 " + intervals[1] + " "+ intFunc(intervals[1], F_theor);
-					label13->Text = "2 = " + intervals[0] +" "+ intFunc(intervals[0], F_theor);
+					label12->Text = "в точке 2 =  " + intervals[1] + " "+ intFunc(intervals[2], F_theor);
+					label13->Text = "в точке 1 = " + intervals[0] +" "+ intFunc(intervals[1], F_theor);
 
-					label11->Text = "pi = ";
-
+					
 					label17->Text = "Debug3";
 
-					for (int i = 0; i < tab.ni.size(); i++)
+					label11->Text = "pi = ";
+					for (int i = 0; i < tab.pi.size(); i++)
 						label11->Text += " " + Convert::ToString(tab.pi[i]);
 					label17->Text = "Debug4";
 					double X_2 = 0.0;
